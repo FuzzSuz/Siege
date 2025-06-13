@@ -12,7 +12,8 @@
             <h1>R6S Operator Picker</h1>
             <nav>
                 <ul>
-                    <li><a href="#" class="active" data-panel="all-operators">View All Operators</a></li>
+                    <li><a href="#" class="active" data-panel="featured-operator">Featured Operator</a></li>
+                    <li><a href="#" data-panel="all-operators">View All Operators</a></li>
                     <li><a href="#" data-panel="random-attacker">Random Attacker</a></li>
                     <li><a href="#" data-panel="random-defender">Random Defender</a></li>
                     <li><a href="#" data-panel="random-strategies">Random Strategies</a></li>
@@ -23,8 +24,15 @@
         </div>
 
         <div class="content">
+            <!-- Featured Operator Panel -->
+            <div class="panel active" id="featured-operator">
+                <h2>Featured Operator</h2>
+                <button class="action-button" id="refresh-featured-operator">Refresh Operator</button>
+                <div class="operator-display" id="featured-operator-display"></div>
+            </div>
+
             <!-- All Operators Panel -->
-            <div class="panel active" id="all-operators">
+            <div class="panel" id="all-operators">
                 <h2>All Operators</h2>
                 <div class="tabs">
                     <button class="tab-button active" data-tab="attackers">Attackers</button>
@@ -110,6 +118,31 @@
             <div class="operator-stats">
                 <span class="operator-speed"></span>
                 <span class="operator-armor"></span>
+            </div>
+        </div>
+    </template>
+
+    <!-- Extended operator card template for featured operator -->
+    <template id="featured-operator-card-template">
+        <div class="operator-card featured-operator-card">
+            <div class="basic-info">
+                <h3 class="operator-name"></h3>
+                <p class="operator-side"></p>
+                <p class="operator-ability"></p>
+                <div class="operator-stats">
+                    <span class="operator-speed"></span>
+                    <span class="operator-armor"></span>
+                </div>
+            </div>
+            <div class="extended-info">
+                <div class="operator-details">
+                    <p class="operator-organization"><strong>Organization:</strong> <span></span></p>
+                    <p class="operator-birthplace"><strong>Birthplace:</strong> <span></span></p>
+                </div>
+                <div class="operator-biography">
+                    <h4>Biography</h4>
+                    <p></p>
+                </div>
             </div>
         </div>
     </template>

@@ -18,6 +18,9 @@ function initApp() {
     // Load initial data
     loadAllOperators();
 
+    // Load featured operator
+    loadFeaturedOperator();
+
     // Set up action buttons
     setupActionButtons();
 }
@@ -80,6 +83,14 @@ function setupTabs() {
 }
 
 function setupActionButtons() {
+    // Featured Operator refresh button
+    const refreshFeaturedBtn = document.getElementById('refresh-featured-operator');
+    if (refreshFeaturedBtn) {
+        refreshFeaturedBtn.addEventListener('click', function() {
+            loadFeaturedOperator();
+        });
+    }
+
     // Random Attacker button
     const randomAttackerBtn = document.getElementById('get-random-attacker');
     if (randomAttackerBtn) {
@@ -201,6 +212,54 @@ function displayStrategy(strategy, containerId) {
         container.innerHTML = '';
         container.appendChild(createStrategyCard(strategy));
     }
+}
+
+/**
+ * Creates an extended operator card with additional information for the featured operator
+ */
+function createFeaturedOperatorCard(operator) {
+    // Clone the template
+    const template = document.getElementById('featured-operator-card-template');
+    const card = document.importNode(template.content, true).querySelector('.featured-operator-card');
+
+    // Set data attribute for styling
+    card.setAttribute('data-side', operator.side);
+
+    // Fill in the basic data
+    card.querySelector('.operator-name').textContent = operator.name;
+    card.querySelector('.operator-side').textContent = operator.side;
+    card.querySelector('.operator-ability').textContent = `Ability: ${operator.specialAbility}`;
+    card.querySelector('.operator-speed').textContent = `Speed: ${operator.speed}`;
+    card.querySelector('.operator-armor').textContent = `Armor: ${operator.armor}`;
+
+    // Fill in the extended data
+    card.querySelector('.operator-organization span').textContent = operator.organization || "N/A";
+    card.querySelector('.operator-birthplace span').textContent = operator.birthplace || "N/A";
+    card.querySelector('.operator-biography p').textContent = operator.biography || "No biography available.";
+
+    return card;
+}
+
+/**
+ * Displays a featured operator with extended information
+ */
+function displayFeaturedOperator(operator, containerId) {
+    const container = document.getElementById(containerId);
+    if (container) {
+        container.innerHTML = '';
+        container.appendChild(createFeaturedOperatorCard(operator));
+    }
+}
+
+/**
+ * Loads a random operator (either attacker or defender) and displays it in the featured operator section
+ */
+function loadFeaturedOperator() {
+    // Get a random operator (50% chance for attacker, 50% chance for defender)
+    const operator = Math.random() < 0.5 ? siegePicker.getRandomAttacker() : siegePicker.getRandomDefender();
+
+    // Display the operator in the featured operator section with extended information
+    displayFeaturedOperator(operator, 'featured-operator-display');
 }
 
 function displayFilterResults(operators, containerId, rating, filterType) {

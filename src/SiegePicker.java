@@ -18,6 +18,7 @@ public class SiegePicker {
 
     private void initializeOperators() {
         // Attackers
+        operators.add(new Operator("Striker", "Attacker", "Gadget Kit", 2, 2));
         operators.add(new Operator("Ash", "Attacker", "Breaching Round", 3, 1));
         operators.add(new Operator("Thermite", "Attacker", "Exothermic Charge", 2, 2));
         operators.add(new Operator("Thatcher", "Attacker", "EMP Grenade", 2, 2));
@@ -55,9 +56,10 @@ public class SiegePicker {
         operators.add(new Operator("Ram", "Attacker", "BU-GI Auto Breacher", 1, 3));
         operators.add(new Operator("Deimos", "Attacker", "Deathmark Tracker", 2, 2));
         operators.add(new Operator("Rauora", "Attacker", "DOM Camouflage Panels", 2, 2));
-        operators.add(new Operator("Striker", "Attacker", "Gadget Kit", 2, 2));
+
 
         // Defenders
+        operators.add(new Operator("Sentry", "Defender", "Gadget Kit", 2, 2));
         operators.add(new Operator("Smoke", "Defender", "Remote Gas Grenade", 2, 2));
         operators.add(new Operator("Mute", "Defender", "Signal Disruptor", 2, 2));
         operators.add(new Operator("Castle", "Defender", "Armor Panel", 2, 2));
@@ -94,7 +96,6 @@ public class SiegePicker {
         operators.add(new Operator("Fenrir", "Defender", "F-NATT Dread Mines", 2, 2));
         operators.add(new Operator("Tubarão", "Defender", "Zoto Canisters", 2, 2));
         operators.add(new Operator("Skopos", "Defender", "Pantheon V10", 2, 2));
-        operators.add(new Operator("Sentry", "Defender", "Gadget Kit", 2, 2));
     }
 
     public List<Operator> getAllOperators() {

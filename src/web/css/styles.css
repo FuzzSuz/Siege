@@ -281,3 +281,77 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+
+/* Featured operator styling */
+#featured-operator-display .operator-card {
+    max-width: 400px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#featured-operator-display .operator-card:hover {
+    transform: scale(1.02);
+}
+
+#featured-operator-display .operator-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#featured-operator-display .operator-side {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#featured-operator-display .operator-ability {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#featured-operator-display .operator-stats {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Featured operator extended info styling */
+.featured-operator-card {
+    max-width: 600px !important;
+}
+
+.featured-operator-card .basic-info {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.featured-operator-card .extended-info {
+    text-align: left;
+    padding-top: 10px;
+}
+
+.featured-operator-card .operator-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.featured-operator-card .operator-details p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.featured-operator-card .operator-biography h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.featured-operator-card .operator-biography p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
