@@ -1,0 +1,7 @@
+This is a placeholder file for the defenders directory.
+
+To add operator images:
+1. Create PNG images for each defender operator
+2. Name the images according to the operator's name in lowercase with spaces replaced by underscores
+   Example: rook.png, doc.png, smoke.png
+3. Place the images in this directory

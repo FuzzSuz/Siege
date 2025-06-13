@@ -1,0 +1,7 @@
+This is a placeholder file for the attackers directory.
+
+To add operator images:
+1. Create PNG images for each attacker operator
+2. Name the images according to the operator's name in lowercase with spaces replaced by underscores
+   Example: sledge.png, ash.png, thermite.png
+3. Place the images in this directory

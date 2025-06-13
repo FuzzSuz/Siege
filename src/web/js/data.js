@@ -5,7 +5,7 @@
 
 // Operator class equivalent
 class Operator {
-    constructor(name, side, specialAbility, speed, armor, organization = "", birthplace = "", biography = "") {
+    constructor(name, side, specialAbility, speed, armor, organization = "", birthplace = "", biography = "", imagePath = "") {
         this.name = name;
         this.side = side;
         this.specialAbility = specialAbility;
@@ -14,6 +14,14 @@ class Operator {
         this.organization = organization;
         this.birthplace = birthplace;
         this.biography = biography;
+
+        // If no image path is provided, generate one based on the operator's name and side
+        if (!imagePath) {
+            const folder = side === "Attacker" ? "attackers" : "defenders";
+            this.imagePath = `images/${folder}/${name.toLowerCase().replace(/\s+/g, '_')}.png`;
+        } else {
+            this.imagePath = imagePath;
+        }
     }
 }
 

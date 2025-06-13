@@ -1,0 +1,7 @@
+This file is a placeholder for the default operator image.
+
+To add a default placeholder image:
+1. Create a PNG image named "placeholder.png"
+2. Place it in this directory (src/web/images/)
+
+This image will be displayed when an operator's image is not found.

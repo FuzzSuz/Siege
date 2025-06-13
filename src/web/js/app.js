@@ -172,6 +172,18 @@ function createOperatorCard(operator) {
     // Set data attribute for styling
     card.setAttribute('data-side', operator.side);
 
+    // Set the operator image
+    const imageElement = card.querySelector('.operator-image');
+    imageElement.src = operator.imagePath;
+    imageElement.alt = `${operator.name} Image`;
+
+    // Add error handler for missing images
+    imageElement.onerror = function() {
+        // Set a default image or hide the image container
+        this.src = 'images/placeholder.png';
+        this.alt = 'Image not available';
+    };
+
     // Fill in the data
     card.querySelector('.operator-name').textContent = operator.name;
     card.querySelector('.operator-side').textContent = operator.side;
@@ -224,6 +236,18 @@ function createFeaturedOperatorCard(operator) {
 
     // Set data attribute for styling
     card.setAttribute('data-side', operator.side);
+
+    // Set the operator image
+    const imageElement = card.querySelector('.operator-image');
+    imageElement.src = operator.imagePath;
+    imageElement.alt = `${operator.name} Image`;
+
+    // Add error handler for missing images
+    imageElement.onerror = function() {
+        // Set a default image or hide the image container
+        this.src = 'images/placeholder.png';
+        this.alt = 'Image not available';
+    };
 
     // Fill in the basic data
     card.querySelector('.operator-name').textContent = operator.name;
