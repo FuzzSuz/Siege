@@ -21,7 +21,7 @@
                 </ul>
             </nav>
         </div>
-        
+
         <div class="content">
             <!-- All Operators Panel -->
             <div class="panel active" id="all-operators">
@@ -37,21 +37,21 @@
                     <div class="operator-grid" id="defenders-grid"></div>
                 </div>
             </div>
-            
+
             <!-- Random Attacker Panel -->
             <div class="panel" id="random-attacker">
                 <h2>Random Attacker</h2>
                 <button class="action-button" id="get-random-attacker">Get Random Attacker</button>
                 <div class="operator-display" id="random-attacker-display"></div>
             </div>
-            
+
             <!-- Random Defender Panel -->
             <div class="panel" id="random-defender">
                 <h2>Random Defender</h2>
                 <button class="action-button" id="get-random-defender">Get Random Defender</button>
                 <div class="operator-display" id="random-defender-display"></div>
             </div>
-            
+
             <!-- Random Strategies Panel -->
             <div class="panel" id="random-strategies">
                 <h2>Random Strategies</h2>
@@ -68,7 +68,7 @@
                 <button class="action-button" id="get-random-strategy">Get Random Strategy</button>
                 <div class="strategy-display" id="random-strategy-display"></div>
             </div>
-            
+
             <!-- Filter by Speed Panel -->
             <div class="panel" id="filter-speed">
                 <h2>Filter by Speed</h2>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="filter-results" id="speed-filter-results"></div>
             </div>
-            
+
             <!-- Filter by Armor Panel -->
             <div class="panel" id="filter-armor">
                 <h2>Filter by Armor</h2>
@@ -100,21 +100,20 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Templates for dynamic content -->
     <template id="operator-card-template">
         <div class="operator-card">
             <h3 class="operator-name"></h3>
             <p class="operator-side"></p>
             <p class="operator-ability"></p>
-            <p class="operator-weapon"></p>
             <div class="operator-stats">
                 <span class="operator-speed"></span>
                 <span class="operator-armor"></span>
             </div>
         </div>
     </template>
-    
+
     <template id="strategy-card-template">
         <div class="strategy-card">
             <h3 class="strategy-name"></h3>
@@ -122,7 +121,7 @@
             <p class="strategy-description"></p>
         </div>
     </template>
-    
+
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
 </body>

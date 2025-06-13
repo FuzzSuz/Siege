@@ -1,6 +1,15 @@
-# Rainbow Six Siege Operator Picker - Web Version
+# Rainbow Six Siege Operator Picker
 
-This is a web-based version of the Rainbow Six Siege Operator Picker application, converted from a Java Swing desktop application to a web application using HTML, CSS, and JavaScript.
+A tool for Rainbow Six Siege players to browse operators, get random operator suggestions, and explore strategies.
+
+## Project Overview
+
+This project includes two versions of the Rainbow Six Siege Operator Picker:
+
+1. **Java Swing Desktop Application**: The original version built with Java Swing.
+2. **Web Application**: A web-based version built with HTML, CSS, and JavaScript.
+
+Both versions provide the same core functionality but with different user interfaces.
 
 ## Features
 
@@ -14,31 +23,64 @@ This is a web-based version of the Rainbow Six Siege Operator Picker application
 ## Project Structure
 
 ```
-src/web/
-├── index.html         # Main HTML file
-├── css/
-│   └── styles.css     # CSS styles
-├── js/
-│   ├── data.js        # Data models and initialization
-│   └── app.js         # Application logic
-└── README.md          # This file
+Siege_Picker/
+├── src/
+│   ├── Main.java                # Entry point for the Java application
+│   ├── Operator.java            # Operator data model
+│   ├── SiegePicker.java         # Core functionality
+│   ├── SiegePickerGUI.java      # Java Swing GUI
+│   ├── Strategy.java            # Strategy data model
+│   └── web/                     # Web application
+│       ├── index.html           # Main HTML file
+│       ├── css/
+│       │   └── styles.css       # CSS styles
+│       ├── js/
+│       │   ├── data.js          # Data models and initialization
+│       │   └── app.js           # Application logic
+│       └── README.md            # Web application documentation
+└── README.md                    # This file
 ```
 
-## How to Run Locally
+## Java Application
 
-1. Simply open the `index.html` file in a web browser.
+### Requirements
 
+- Java Development Kit (JDK) 8 or higher
+
+### How to Run
+
+1. Compile the Java files:
+   ```
+   javac src/*.java
+   ```
+
+2. Run the application:
+   ```
+   java -cp src Main
+   ```
+
+## Web Application
+
+### How to Run Locally
+
+1. Navigate to the web directory:
+   ```
+   cd src/web
+   ```
+
+2. Open the `index.html` file in a web browser:
    ```
    # Using a local web server (recommended)
    # If you have Python installed:
-   cd src/web
    python -m http.server
    # Then open http://localhost:8000 in your browser
 
    # Or just double-click the index.html file to open it directly in a browser
    ```
 
-## Deployment Options
+For more details about the web application, see the [Web Application README](src/web/README.md).
+
+## Deploying the Web Application
 
 To make the web application accessible to others online, you can deploy it to a static website hosting service. Here are several options:
 
@@ -81,7 +123,7 @@ To make the web application accessible to others online, you can deploy it to a 
    firebase init
    ```
    - Select "Hosting" when prompted.
-   - Set the public directory to the current directory (where your index.html is).
+   - Set the public directory to `src/web`.
    - Configure as a single-page app: No.
    - Set up automatic builds and deploys: No.
 5. Deploy your site:
@@ -95,32 +137,12 @@ To make the web application accessible to others online, you can deploy it to a 
 If you prefer traditional web hosting:
 
 1. Sign up for a web hosting service (e.g., Bluehost, HostGator, DreamHost).
-2. Upload all the files in this directory to your hosting account using FTP or the hosting provider's file manager.
+2. Upload the contents of the `src/web` directory to your hosting account using FTP or the hosting provider's file manager.
 3. Your site will be accessible at your domain or subdomain.
-
-## Implementation Details
-
-### Data Models
-
-The application uses JavaScript classes to represent the data models:
-
-- `Operator`: Represents a Rainbow Six Siege operator with properties for name, side (Attacker/Defender), special ability, primary weapon, speed, and armor.
-- `Strategy`: Represents an attack or defense strategy with properties for name, description, and side.
-- `SiegePicker`: Manages the operators and strategies, providing methods to retrieve them based on various criteria.
-
-### User Interface
-
-The user interface is built using HTML and CSS, with JavaScript handling the dynamic content and user interactions. The interface includes:
-
-- A sidebar for navigation
-- Panels for each feature
-- Tabs for separating attackers and defenders
-- Cards for displaying operator and strategy information
-- Action buttons for triggering random selections and filters
 
 ## Converting from Java to Web
 
-This web application is a direct port of the Java Swing application, with the following mappings:
+The web application is a direct port of the Java Swing application, with the following mappings:
 
 - Java classes → JavaScript classes
 - Swing panels → HTML div elements with CSS
@@ -130,11 +152,15 @@ This web application is a direct port of the Java Swing application, with the fo
 
 ## Future Improvements
 
-Potential improvements for the web application:
+Potential improvements for both applications:
 
 1. Add operator images
-2. Implement a responsive design for mobile devices
+2. Implement a responsive design for the web version
 3. Add a search functionality
 4. Add more filtering options (e.g., by weapon type)
 5. Add a map selection feature
 6. Implement user accounts to save favorite operators and strategies
+
+## License
+
+This project is for educational purposes only. Rainbow Six Siege is a trademark of Ubisoft Entertainment.
