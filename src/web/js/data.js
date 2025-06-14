@@ -70,6 +70,7 @@ class SiegePicker {
         this.operators.push(new Operator("Nomad", "Attacker", "Airjab", 2, 2, "GIGR", "Morocco", "Ranged area controller—disrupts defender positioning with airjab traps."));
         this.operators.push(new Operator("Gridlock", "Attacker", "Trax Stingers", 1, 3, "SASR", "Australia", "Zone controller using sticky Trax Stingers to slow and damage through choke points."));
         this.operators.push(new Operator("Nøkk", "Attacker", "HEL Presence Reduction", 2, 2, "Jægerkorpset", "Denmark", "Stealth operator cloaked from cameras and drones—silent and lethal."));
+        this.operators.push(new Operator("Amaru", "Attacker", "Garra Hook", 2, 2, "APCA", "Peru", "Vertical seamer with grappling hook—exposes unexpected angles by climbing."));
         this.operators.push(new Operator("Kali", "Attacker", "LV Explosive Lance", 2, 2, "Nighthaven", "India", "Anti-gadget sniper who also breaches with her LV Explosive Lance."));
         this.operators.push(new Operator("Iana", "Attacker", "Gemini Replicator", 2, 2, "Dutch Army", "Netherlands", "Holo-doppelgänger expert—confuses defenders with replicator drones."));
         this.operators.push(new Operator("Ace", "Attacker", "SELMA Aqua Breacher", 2, 2, "Nighthaven", "Norway", "Charged breacher—throws powerful SELMA water charges through reinforced walls."));
@@ -81,7 +82,6 @@ class SiegePicker {
         this.operators.push(new Operator("Brava", "Attacker", "Kludge Drone", 3, 1, "Nighthaven", "Brazil", "Drone hacker—disrupts defender tech like shields, cams, and traps."));
         this.operators.push(new Operator("Ram", "Attacker", "BU-GI Auto Breacher", 1, 3, "Nighthaven", "South Korea", "Bulldozer breacher—clears barricades and walls with his mini-ram."));
         this.operators.push(new Operator("Deimos", "Attacker", "Deathmark Tracker", 2, 2, "Nighthaven", "USA", "Hunter-drone expert—tags defenders with sonar for team tracking."));
-        this.operators.push(new Operator("Amaru", "Attacker", "Garra Hook", 2, 2, "APCA", "Peru", "Vertical seamer with grappling hook—exposes unexpected angles by climbing."));
         this.operators.push(new Operator("Rauora", "Attacker", "DOM Camouflage Panels", 2, 2, "Nighthaven", "New Zealand", "Mobile cover operator—deploys portable panels for tactical repositioning."));
 
         // Defenders
